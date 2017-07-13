@@ -1,0 +1,40 @@
+{
+  "name": "gulp+webpack-template",
+  "version": "1.0.0",
+  "description": "基于gulp+webpack的多页面前端项目生成器",
+  "main": "index.js",
+  "scripts": {
+    "server": "webpack-dev-server --inline --host 0.0.0.0 --config webpack-dev.config.js",
+    "build": "gulp pack --env debug",
+    "build-idc": "gulp pack --env production"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.21.0",
+    "ejs-loader": "^0.3.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "glob": "^6.0.4",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-jshint": "^2.0.1",
+    "gulp-sftp": "^0.1.5",
+    "gulp-util": "^3.0.7",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.19.0",
+    "html-withimg-loader": "^0.1.16",
+    "image-webpack-loader": "^1.6.1",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0",
+    "jsx-loader": "^0.13.2",
+    "minimist": "^1.2.0",
+    "node-sass": "^3.7.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.15",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
