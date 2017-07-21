@@ -51,7 +51,7 @@ var html_plugins = function () {
         //如果和入口js文件同名
         if (filename in entriesFiles) {
             conf.inject = 'body'
-            conf.chunks = ['vendor', filename]
+            conf.chunks = ['vendor', 'manifest', filename]
         }
         //跨页面引用，如pageA,pageB 共同引用了common-a-b.js，那么可以在这单独处理
         //if(pageA|pageB.test(filename)) conf.chunks.splice(1,0,'common-a-b')
@@ -71,7 +71,7 @@ module.exports = function(options){
     var sassLoader;
 
     plugins.push(new CommonsChunkPlugin({
-        name: 'vendor',
+        names: ['vendor', 'manifest'],
         minChunks: Infinity
     }));
 
